@@ -7,7 +7,7 @@ const getAllPreguntas = async (req, res, next) => {
     return res.json({
       status: 200,
       message: HTTP[200],
-      pregunta: allPreguntas,
+      preguntas: allPreguntas,
     });
   } catch (error) {
     return next(error);
@@ -21,7 +21,7 @@ const getPreguntaByID = async (req, res, next) => {
     return res.json({
       status: 200,
       message: HTTP[200],
-      pregunta: preguntaByID,
+      preguntas: preguntaByID,
     });
   } catch (error) {
     return next(error);
@@ -37,7 +37,7 @@ const getPreguntaByCategory = async (req, res, next) => {
     return res.json({
       status: 200,
       message: HTTP[200],
-      pregunta: preguntaByCategoria,
+      preguntas: preguntaByCategoria,
     });
   } catch (error) {
     return next(error);
@@ -51,7 +51,7 @@ const createPregunta = async (req, res, next) => {
     return res.json({
       status: 200,
       message: HTTP[200],
-      pregunta: createdPregunta,
+      preguntas: createdPregunta,
     });
   } catch (error) {
     return next(error);
