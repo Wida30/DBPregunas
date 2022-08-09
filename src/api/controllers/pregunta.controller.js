@@ -31,7 +31,7 @@ const getPreguntaByID = async (req, res, next) => {
 const getPreguntaByCategory = async (req, res, next) => {
   try {
     const { categoria } = req.params;
-    const preguntaByCategoria = await Pregunta.findOne({
+    const preguntaByCategoria = await Pregunta.find({
       categoria: categoria,
     });
     return res.json({
@@ -43,6 +43,8 @@ const getPreguntaByCategory = async (req, res, next) => {
     return next(error);
   }
 };
+
+
 
 const createPregunta = async (req, res, next) => {
   try {
